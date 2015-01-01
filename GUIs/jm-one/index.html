@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $.get('list',function(data){
+      var lines = data.split('\n');
+      lines.forEach(function(cmd){
+        var url='<li><a href="http://localhost:8080/cgi-bin/cmd.cgi?cmd='+cmd+'" target="_blank" class="ui-btn">'+cmd+'</a></li>'
+        $("#list").append(url).listview('refresh');
+      });
+    })
+  });
+</script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="main" class="ui-content">
+    <ul id="list" data-role="listview" data-inset="true" data-filter="true">
+    </ul>
+  </div>
+</div> 
+
+</body>
+</html>
