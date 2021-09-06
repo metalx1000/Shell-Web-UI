@@ -9,3 +9,10 @@ Right now I use incognito mode and close it out when I'm done.
 
 View a video or the project here:
 http://youtu.be/RWZRN8W1dOg
+
+
+Alternatives
+============
+* https://github.com/meefik/websocket.sh also intended for BusyBox and uses plain shell and netcat
+* https://github.com/shelld3v/wsshell written in Python but have a nice client in form of Chrome Extension
+* https://github.com/joewalnes/websocketd Turn any program that uses STDIN/STDOUT into a WebSocket server
